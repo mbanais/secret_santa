@@ -34,7 +34,7 @@ function pigerPaires(){
         arrListeParticipants[intTableau]=arrParticipants[intTableau].value;
     }
     console.log(arrListeParticipants)
-
+    console.log(arrDejaSelectionnes)
     
 
     /*for(let intParticipant=0; intParticipant<arrParticipants.length; intParticipant++){
