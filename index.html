@@ -4,19 +4,23 @@
     
     </head>
     <body>
-        <header></header>
+        <header class="header">
+            <img class="header__logo" src="./images/secretSanta.png" alt="logo">
+        </header>
         <main class="main">
-            <h1>Échange de cadeaux</h1>
+
+            <h1 hidden>Échange de cadeaux</h1>
             <section class="nbParticipants">
-                <label for="participants">Insérez le nombre de participants</label>
+                <label for="participants">Combien de personnes participent à votre échange</label>
                 <input id="participants" pattern="[0-9]{1,2}">
                 <button type="button" class="btn_suivant">Suivant</button>
             </section>
-            <section class="nomParticipants">
+            <section class="nomParticipants" hidden>
+                <p>Entrer le nom des participants</p>
                 <div class="ctn_participants"></div>
                 <button type="button" class="btn_enregistrer">Enregister</button>
             </section>
-            <section class="paireParticipants">
+            <section class="paireParticipants" hidden>
                 <div class="ctn_paire">
 
                 </div>
