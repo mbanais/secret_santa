@@ -1,0 +1,22 @@
+{
+  "name": "secretsanta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbanais/secret_santa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbanais/secret_santa/issues"
+  },
+  "homepage": "https://github.com/mbanais/secret_santa#readme",
+  "dependencies": {
+    "normalize.scss": "^0.1.0"
+  }
+}

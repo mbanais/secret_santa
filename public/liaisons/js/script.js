@@ -19,6 +19,7 @@ function creerInputs(){
             refCtnParticipants.innerHTML+=strHtml;
         }
         document.querySelector(".nomParticipants").removeAttribute("hidden")
+        document.querySelector(".nbParticipants").setAttribute("hidden", "hidden")
     }
 }
 
@@ -34,6 +35,7 @@ function afficherListeParticipants(){
         refPaire.innerHTML+=strHtml2;
     }
     document.querySelector(".paireParticipants").removeAttribute("hidden")
+    document.querySelector(".nomParticipants").setAttribute("hidden", "hidden")
 }
 
 /**

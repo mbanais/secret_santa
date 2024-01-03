@@ -1,0 +1,20 @@
+.nbParticipants{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //border: solid black 1px;
+    @media (min-width:600px) {
+        margin-top: 30px;
+    }
+
+    label{
+        margin-bottom: 30px;
+    }
+    input{
+        margin-bottom: 30px;
+    }
+    button{
+
+    }
+}

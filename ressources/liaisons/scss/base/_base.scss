@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fonte;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background-color: $vert;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    background: $blanc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media (min-width: 600px) {
+        width: 70vw;
+        height: 70vh;
+    }
+    .main__logo{
+        width: 40%;
+        margin: 50px 0;
+    }
+}
+
+
+

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin";
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #396B56;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  main {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+main .main__logo {
+  width: 40%;
+  margin: 50px 0;
+}
+
+.nbParticipants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .nbParticipants {
+    margin-top: 30px;
+  }
+}
+.nbParticipants label {
+  margin-bottom: 30px;
+}
+.nbParticipants input {
+  margin-bottom: 30px;
+}
+.nbParticipants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .nbParticipants {
+    margin-top: 30px;
+  }
+}
+.nbParticipants label {
+  margin-bottom: 30px;
+}
+.nbParticipants input {
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
