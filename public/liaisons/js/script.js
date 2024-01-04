@@ -14,12 +14,12 @@ function creerInputs(){
 
     if(pattern.test(champCible.value)){
         for(let intCpt=0; intCpt<intNbParticipant; intCpt++){
-            strHtml=`<label for="participant${intCpt+1}">Participant ${intCpt+1}</label>
+            strHtml=`<label for="participant${intCpt+1}">Participant ${intCpt+1}: </label>
             <input class="participant" id="participant${intCpt+1}"><br>`;
             refCtnParticipants.innerHTML+=strHtml;
         }
-        document.querySelector(".nomParticipants").removeAttribute("hidden")
-        document.querySelector(".nbParticipants").setAttribute("hidden", "hidden")
+        document.querySelector(".nomParticipants").classList.remove("cache")
+        document.querySelector(".nbParticipants").classList.add("cache")
     }
 }
 
@@ -31,11 +31,11 @@ function afficherListeParticipants(){
     const refPaire=document.querySelector(".ctn_paire");
     let strHtml2;
     for(let intPart=0; intPart<arrParticipants.length; intPart++){
-        strHtml2=`<p class="santa${intPart+1}"><strong>${arrParticipants[intPart].value}</strong> &rarr; </p><span id="paire${intPart+1}">?</span>`
+        strHtml2=`<p class="santa${intPart+1}"><strong>${arrParticipants[intPart].value}</strong> &rarr; <span id="paire${intPart+1}">?</span></p>`
         refPaire.innerHTML+=strHtml2;
     }
-    document.querySelector(".paireParticipants").removeAttribute("hidden")
-    document.querySelector(".nomParticipants").setAttribute("hidden", "hidden")
+    document.querySelector(".paireParticipants").classList.remove("cache")
+    document.querySelector(".nomParticipants").classList.add("cache")
 }
 
 /**
@@ -50,7 +50,6 @@ function pigerPaires(){
         arrParticipants[intCptPart]=document.querySelectorAll(".participant")[intCptPart].value;
         intCptPart=intCptPart+1;
     }
-
     /*On récupère le nombre de participants */
     let intNbParticipant=parseInt(refInputNbPart.value);
     let intcpt=1;
@@ -70,7 +69,19 @@ function pigerPaires(){
             intCompteur++;
         }
     }
+    document.querySelector(".btn_piger").setAttribute("disabled", "disabled")
+    document.querySelector(".btn_repiger").removeAttribute("disabled")
 }
+
+function repigerPaires(){
+    let arrSpan = document.querySelectorAll(".ctn_paire span")
+    arrSpan.forEach(element =>{
+        element.innerHTML="?";
+    })
+    document.querySelector(".btn_piger").removeAttribute("disabled")
+    document.querySelector(".btn_repiger").setAttribute("disabled", "disabled")
+}
+
 
 
 document.querySelector(".btn_suivant").addEventListener("click", function(){
@@ -81,4 +92,7 @@ document.querySelector(".btn_enregistrer").addEventListener("click", function(){
 });
 document.querySelector(".btn_piger").addEventListener("click", function(){
     pigerPaires();
+});
+document.querySelector(".btn_repiger").addEventListener("click", function(){
+    repigerPaires();
 });
